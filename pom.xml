@@ -97,13 +97,8 @@
 				<configuration>
 					<sources>
 						<source>src/main/resources/pokeSoapService.xsd</source>
-						<source>src/main/resources/exampleService.xsd</source>
-
-						<!-- Agrega aquí todos los archivos XSD que quieras convertir a clases Java -->
 					</sources>
 					<packageName>com.pokeapi.gen</packageName>
-					<!-- Paquete donde quieres generar las clases -->
-
 				</configuration>
 				<dependencies>
 						<dependency>

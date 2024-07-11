@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://pokeapi.com"
+           xmlns="http://pokeapi.com"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="ExampleResponse">
+        <xs:sequence>
+            <xs:element name="output" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -22,8 +22,6 @@ public class IpAddressInterceptor implements EndpointInterceptor {
 	@Autowired
 	private HttpServletRequest request;
 
-	@Autowired
-	private LogbookService logbookService;
 
 	@Override
 	public boolean handleRequest(MessageContext messageContext, Object endpoint) throws Exception {
@@ -33,12 +31,10 @@ public class IpAddressInterceptor implements EndpointInterceptor {
 			String className = methodEndpoint.getMethod().getDeclaringClass().getSimpleName();
 
 			logger.debug("Request made to method: " + className + "." + methodName);
-			LocalDateTime requestTime = LocalDateTime.now();
-			String formattedRequestTime = requestTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
 			String ipAddress = request.getRemoteAddr();
 			logger.debug("Client IP Address: " + ipAddress);
-			this.logbookService.save(methodName,ipAddress,formattedRequestTime);
+
 		}
 
 

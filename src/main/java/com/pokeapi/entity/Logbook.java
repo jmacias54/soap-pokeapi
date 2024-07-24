@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -16,5 +17,8 @@ public class Logbook {
     private int id;
     private String ipAddress;
     private String method;
-    private Date dateRequest;
+    private LocalDateTime dateRequest;
+    private String request;
+    private String response;
+    private Long duration;
 }
